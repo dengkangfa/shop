@@ -15,9 +15,14 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->string('name', 50)->unique();
+            $table->string('email', 50)->unique();
+            $table->string('avatar');
+            $table->tinyInteger('sex')->default(1)->commen('0为女，1为男');
+            $table->string('password', 60);
+            $table->integer('login_count')->default(0)->comment('登录次数');
+            $table->string('active_token')->comment('邮箱激活的token');
+            $table->tinyInteger('is_active')->default(0)->comment('用户是否激活');
             $table->rememberToken();
             $table->timestamps();
         });
