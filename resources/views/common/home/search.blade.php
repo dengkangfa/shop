@@ -50,7 +50,7 @@
 <script>
     var car_nums_span = document.getElementById('cart-number');
     @auth
-        car_nums_span.innerText = parseInt("{{ Auth::user()->cars->count() }}");
+        {{--car_nums_span.innerText = parseInt("{{ Auth::user()->cars->count() }}");--}}
     @endauth
     @guest
         car_nums_span.innerText = localStorage.length;

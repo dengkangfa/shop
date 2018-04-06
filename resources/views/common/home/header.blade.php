@@ -9,14 +9,14 @@
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-8">
-                    <ul class="nav-top nav-top-right list-inline t-xs-center t md-right">
+                    <ul class="nav-top nav-top-right list-inline t-xs-center t-md-right">
                         @auth
                             <li>
                                 <a href="{{ url('/user') }}"><i class="fa fa-user"></i>{{ Auth::user()->name }}</a>
                             </li>
                             <li>
                                 <a href="javascript;" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"></a>
+                                                     document.getElementById('logout-form').submit();"><i class="fa fa-lock"></i>注销</a>
                             </li>
                         @endauth
                         @guest
@@ -26,7 +26,7 @@
                         @endguest
                     </ul>
                 </div>
-                <form id="logout-form" action="" method="POST" style="display: none;">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
             </div>
