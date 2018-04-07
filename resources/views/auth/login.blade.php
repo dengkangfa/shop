@@ -53,7 +53,7 @@
                         <div class="col-sm-6 col-md-5 col-right">
                             <div class="social-login p-40">
                                 <div class="mb-20">
-                                    <a href="" class="btn btn-lg btn-block btn-social btn-facebook"><i class="fa fa-github"></i>登录 Github</a>
+                                    <a href="{{ url('/auth/github') }}" class="btn btn-lg btn-block btn-social btn-facebook"><i class="fa fa-github"></i>登录 Github</a>
                                 </div>
                                 <div class="mb-20">
                                     <a href="" class="btn btn-lg btn-block btn-social btn-twitter"><i class="fa fa-qq"></i>登录  QQ</a>
